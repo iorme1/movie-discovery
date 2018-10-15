@@ -1,0 +1,13 @@
+<% @presenter.shows.each do |show| %>
+    <% if show["poster_path"] %>
+        <%= link_to tvshow_path(show["id"]) do %>
+          <%= image_tag(@image_path + "w185" + show["poster_path"],
+            alt: show["name"], class: "poster-img")%>
+        <% end %>
+    <% else %>
+        <%= link_to tvshow_path(show["id"]) do %>
+           <%= image_tag("", alt: truncate(show["name"], length: 18),
+           class: "pt-2 poster-img no-img-preview-sm") %>
+        <% end %>
+    <% end %>
+<% end %>

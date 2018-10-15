@@ -9,3 +9,14 @@
     <%= render 'search' %>
   </div>
 </div>
+
+<% if shows_empty? %>
+  <%= render partial: 'shared/empty_search' %>
+<% else %>
+  <div class="poster-previews mb-4">
+    <h3 class="current-media-selection mb-4 text-center animated rollIn">
+      <%= @presenter.shows_description %>
+    </h3>
+     <%= render 'tvshows' %>
+  </div>
+<% end %>
