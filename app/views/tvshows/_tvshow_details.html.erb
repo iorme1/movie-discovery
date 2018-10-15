@@ -1,0 +1,14 @@
+<div class="col-lg-6 col-md-12 poster-show-info mt-3 animated slideInRight">
+  <h2><%= @presenter.name %></h2>
+  <p>Created By: <%= @presenter.created_by %></p>
+  <p>Genre: <%= @presenter.genre %></p>
+  <p>Total Seasons: <%= @presenter.number_of_seasons %></p>
+  <p>Total Episodes: <%= @presenter.number_of_episodes %></p>
+  <h3>Overview</h3>
+  <p><%= @presenter.overview %></p>
+  <p>
+    <%= link_to "Back to Home",
+      root_path, class: "btn btn-sm btn-danger mb-2"
+    %>
+  </p>
+</div>

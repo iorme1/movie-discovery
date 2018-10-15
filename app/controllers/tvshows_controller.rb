@@ -1,11 +1,12 @@
 class TvshowsController < ApplicationController
-  before_action :set_image_path, only: [:index]
+  before_action :set_image_path, only: [:index, :show]
 
   def index
     @presenter = Tvshows::IndexPresenter.new(params[:search])
   end
 
   def show
+    @presenter = Tvshows::ShowPresenter.new(params[:id])
   end
 
   private

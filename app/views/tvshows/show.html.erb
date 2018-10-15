@@ -1,2 +1,12 @@
-<h1>Tvshows#show</h1>
-<p>Find me in app/views/tvshows/show.html.erb</p>
+<div class="row mt-4 poster-show-container">
+  <div class="col-lg-6 col-md-12 poster-show-img">
+    <% if @presenter.poster_path %>
+      <%= image_tag(@image_path + "w342" + @presenter.poster_path,
+        class: "animated slideInLeft")
+      %>
+    <% else %>
+      <%= image_tag("", alt: "No Poster", class: "animated slideInLeft no-img-preview-md") %>
+    <% end %>
+  </div>
+    <%= render 'tvshow_details' %>
+</div>

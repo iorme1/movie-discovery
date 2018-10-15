@@ -24,4 +24,26 @@ RSpec.describe TvshowsController, type: :controller do
       expect(assigns(:image_path)).not_to be(nil)
     end
   end
+
+  describe "GET show" do
+    it "returns http success" do
+      get :show, params: {id: 100}
+      expect(response).to have_http_status(:success)
+    end
+
+    it "renders the #show view" do
+      get :show, params: {id: 100}
+      expect(response).to render_template :show
+    end
+
+    it "assigns @presenter" do
+      get :show, params: {id: 100}
+      expect(assigns(:presenter)).not_to be(nil)
+    end
+
+    it "assigns @image_path" do
+      get :show, params: {id: 100}
+      expect(assigns(:image_path)).not_to be(nil)
+    end
+  end
 end
