@@ -17,13 +17,3 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require_tree .
-
-$(document).on('turbolinks:load',function(){
-  Scout.configure({
-      clientId: "8024cfa6-7f1d-4789-a093-99c8164e0681"
-    }).then(() => {
-      Scout.players.search("Ninja", "epic", null, "fortnite").then(results => {
-        console.log(results);
-      });
-    });
-});
