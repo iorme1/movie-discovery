@@ -16,6 +16,7 @@ group :production do
   gem 'pg'
 end
 
+gem 'devise'
 gem 'font-awesome-rails'
 gem "animate-rails"
 gem "figaro"
